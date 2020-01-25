@@ -4,17 +4,41 @@ public class Main
 {
 	public static void main(String[] args)
 	{
-		System.out.println("Hello World!");
-
-		Scanner input = new Scanner(System.in);
-
-		System.out.print("Enter a number: ");
-		double number1 = input.nextDouble();
-
-		System.out.print("Enter second number: ");
-		double number2 = input.nextDouble();
-
-		double product = number1 * number2;
-		System.out.printf("The product of both numbers is: %f", product);
+		String text="";
+		Scanner scanner=new Scanner(System.in);
+		int count=0;
+		
+		System.out.println("Enter String :");
+	    text=scanner.nextLine();
+		CodedSignal c=new CodedSignal(text);
+		
+		System.out.print("\n Enter Choice \n 1.Orignal Signal \n 2.Encoded Signal \n 3.Decoded Signal\n\n");
+		
+		do
+		{
+			switch(scanner.nextInt())
+			{
+				case 1:
+					System.out.println("Original Signal :"+c.getOrignalSignal());
+					count++;
+					
+				break;
+				
+				case 2:
+					
+				    System.out.println("Encoded Signal :"+c.encodeSignal());
+				    count++;
+					
+				break;
+				
+				case 3:
+					System.out.println("Decoded Signal :"+c.decodeSignal(c));
+					count++;
+					
+				break;
+		}
+		}while(count!=2);
+		
 	}
 }
+

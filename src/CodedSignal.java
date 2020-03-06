@@ -60,10 +60,7 @@ public class CodedSignal
 	public String getDecodedSignal(){
 		return decoded;
 	}
-	public void  hi()
-	{
-		
-	}
+	
 	
 	
 }
